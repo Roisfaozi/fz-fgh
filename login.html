@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/login.css" />
+  </head>
+  <body>
+    <main class="container">
+      <!-- Left Section (Form) -->
+      <div class="form-section">
+        <div class="logo">
+          <div class="">
+            <img src="./assets/logo.png" alt="Logo" />
+          </div>
+          <span class="logo-text">E-Wallet</span>
+        </div>
+        <h1>
+          Start Accessing Banking Needs With All Devices and All Platforms With
+          30.000+ Users
+        </h1>
+        <p>
+          Transfering money is eassier than ever, you can access Zwallet
+          wherever you are. Desktop, laptop, mobile phone? we cover all of that
+          for you!
+        </p>
+
+        <div class="social-login">
+          <button class="btn google">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M22.3055 10.5415H21.5V10.5H12.5V14.5H18.1515C17.327 16.8285 15.1115 18.5 12.5 18.5C9.1865 18.5 6.5 15.8135 6.5 12.5C6.5 9.1865 9.1865 6.5 12.5 6.5C14.0295 6.5 15.421 7.077 16.4805 8.0195L19.309 5.191C17.523 3.5265 15.134 2.5 12.5 2.5C6.9775 2.5 2.5 6.9775 2.5 12.5C2.5 18.0225 6.9775 22.5 12.5 22.5C18.0225 22.5 22.5 18.0225 22.5 12.5C22.5 11.8295 22.431 11.175 22.3055 10.5415Z"
+                fill="#FFC107" />
+              <path
+                d="M3.65308 7.8455L6.93858 10.255C7.82758 8.054 9.98058 6.5 12.5001 6.5C14.0296 6.5 15.4211 7.077 16.4806 8.0195L19.3091 5.191C17.5231 3.5265 15.1341 2.5 12.5001 2.5C8.65908 2.5 5.32808 4.6685 3.65308 7.8455Z"
+                fill="#FF3D00" />
+              <path
+                d="M12.4999 22.5001C15.0829 22.5001 17.4299 21.5116 19.2044 19.9041L16.1094 17.2851C15.0717 18.0743 13.8036 18.5011 12.4999 18.5001C9.89891 18.5001 7.69041 16.8416 6.85841 14.5271L3.59741 17.0396C5.25241 20.2781 8.61341 22.5001 12.4999 22.5001Z"
+                fill="#4CAF50" />
+              <path
+                d="M22.3055 10.5415H21.5V10.5H12.5V14.5H18.1515C17.7571 15.6082 17.0467 16.5766 16.108 17.2855L16.1095 17.2845L19.2045 19.9035C18.9855 20.1025 22.5 17.5 22.5 12.5C22.5 11.8295 22.431 11.175 22.3055 10.5415Z"
+                fill="#1976D2" />
+            </svg>
+            Sign In With Google
+          </button>
+          <button class="btn facebook">
+            <svg
+              width="25"
+              height="25"
+              viewBox="0 0 25 25"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M12.501 2.50195C6.97895 2.50195 2.50195 6.97895 2.50195 12.501C2.50195 17.491 6.15795 21.627 10.939 22.38V15.392H8.39895V12.501H10.939V10.298C10.939 7.78995 12.432 6.40695 14.715 6.40695C15.809 6.40695 16.955 6.60195 16.955 6.60195V9.06095H15.691C14.451 9.06095 14.063 9.83295 14.063 10.624V12.499H16.834L16.391 15.39H14.063V22.378C18.844 21.629 22.5 17.492 22.5 12.501C22.5 6.97895 18.023 2.50195 12.501 2.50195Z"
+                fill="#395185" />
+            </svg>
+            Sign In With Facebook
+          </button>
+        </div>
+
+        <div class="divider">Or</div>
+
+        <form>
+          <label for="email">Email</label>
+          <div class="input-group">
+            <span class="icon">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_487)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.74988 2C0.78338 2 -0.000122066 2.7835 -0.000122066 3.75V4.48577C-0.000285027 4.49479 -0.000284637 4.50381 -0.000122066 4.51282V12.25C-0.000122066 13.2165 0.783379 14 1.74988 14H14.2499C15.2164 14 15.9999 13.2165 15.9999 12.25V4.51265C16.0001 4.50376 16.0001 4.49485 15.9999 4.48594V3.75C15.9999 2.7835 15.2164 2 14.2499 2H1.74988ZM14.4999 4.07029V3.75C14.4999 3.61193 14.388 3.5 14.2499 3.5H1.74988C1.61181 3.5 1.49988 3.61193 1.49988 3.75V4.07029L7.99988 7.88063L14.4999 4.07029ZM1.49988 5.80902V12.25C1.49988 12.3881 1.61181 12.5 1.74988 12.5H14.2499C14.388 12.5 14.4999 12.3881 14.4999 12.25V5.80902L8.37917 9.39702C8.14495 9.53432 7.85481 9.53432 7.62059 9.39702L1.49988 5.80902Z"
+                    fill="#4F5665" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_487">
+                    <rect width="16" height="16" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </span>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter Your Email"
+              class="input-auth" />
+          </div>
+          <label for="password">Password</label>
+          <div class="input-group">
+            <span class="icon">
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.12583 8.00005C7.12583 8.68205 6.57316 9.23471 5.89116 9.23471C5.20916 9.23471 4.65649 8.68205 4.65649 8.00005C4.65649 7.31805 5.20916 6.76538 5.89116 6.76538H5.89316C6.57449 6.76605 7.12583 7.31871 7.12583 8.00005Z"
+                  stroke="#4F5665"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M7.12793 8.00006H11.3399V9.23473"
+                  stroke="#4F5665"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M9.45467 9.23473V8.00006"
+                  stroke="#4F5665"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M1.83325 8.00004C1.83325 3.37537 3.37525 1.83337 7.99992 1.83337C12.6246 1.83337 14.1666 3.37537 14.1666 8.00004C14.1666 12.6247 12.6246 14.1667 7.99992 14.1667C3.37525 14.1667 1.83325 12.6247 1.83325 8.00004Z"
+                  stroke="#4F5665"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+            <input
+              type="password"
+              id="password"
+              class="input-auth"
+              placeholder="Enter Your Password" />
+            <span class="show-hide" onclick="showPassword('password')"
+              ><svg
+                width="16"
+                height="16"
+                viewBox="0 0 16 16"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M3 2.50012L13 13.5001"
+                  stroke="#4F5665"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M9.68179 9.84999C9.19117 10.2959 8.54349 10.5287 7.88124 10.4972C7.21898 10.4656 6.59639 10.1723 6.1504 9.68167C5.70441 9.19109 5.47156 8.54344 5.50307 7.88118C5.53458 7.21892 5.82786 6.5963 6.31841 6.15027"
+                  stroke="#4F5665"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M4.62465 4.28723C2.07657 5.57758 1 8.00013 1 8.00013C1 8.00013 3 12.4996 8 12.4996C9.1715 12.509 10.3284 12.2391 11.3748 11.7125"
+                  stroke="#4F5665"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M13.038 10.5688C14.4006 9.34839 14.9999 8.00013 14.9999 8.00013C14.9999 8.00013 12.9999 3.49964 7.99991 3.49964C7.56687 3.49894 7.1345 3.53414 6.70728 3.6049"
+                  stroke="#4F5665"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M8.47046 5.54431C9.00182 5.64634 9.48577 5.91791 9.84972 6.31827C10.2137 6.71863 10.438 7.22621 10.4891 7.76486"
+                  stroke="#4F5665"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </span>
+          </div>
+          <button type="submit" class="register-btn">Login</button>
+        </form>
+
+        <p class="register-link">
+          Not Have An Account? <a href="/register.html">Register</a>
+        </p>
+      </div>
+
+      <!-- Right Section (Illustration) -->
+      <div class="illustration-section">
+        <img src="./assets/wallet-login.png" alt="E-Wallet Illustration" />
+      </div>
+    </main>
+    <script>
+      const form = document.querySelector('form')
+      const emailInput = document.getElementById('email')
+      const passwordInput = document.getElementById('password')
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault()
+
+        // Form validation
+        if (emailInput.value.trim() === '') {
+          poupup('Silakan masukkan alamat email yang valid')
+          return
+        }
+
+        if (passwordInput.value.trim() === '') {
+          poupup('Silakan masukkan kata sandi')
+          return
+        }
+
+        location.href = 'dashboard.html'
+      })
+
+      function poupup(pesan) {
+        const poupupElement = document.createElement('div')
+        poupupElement.classList.add('poupup')
+        poupupElement.innerHTML = `
+    <div class="poupup-container">
+      <div class="poupup-header">
+        <h2>Peringatan</h2>
+      </div>
+      <div class="poupup-body">
+        <p>${pesan}</p>
+      </div>
+      <div class="poupup-footer">
+        <button class="poupup-btn">Tutup</button>
+      </div>
+    </div>
+  `
+
+        document.body.appendChild(poupupElement)
+
+        const poupupBtn = poupupElement.querySelector('.poupup-btn')
+        poupupBtn.addEventListener('click', () => {
+          poupupElement.remove()
+        })
+      }
+    </script>
+    <script>
+      function showPassword(id) {
+        const passwordInput = document.getElementById(id)
+        const type = passwordInput.getAttribute('type')
+
+        if (type === 'password') {
+          passwordInput.setAttribute('type', 'text')
+        } else {
+          passwordInput.setAttribute('type', 'password')
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -3,11 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
-    </style>
+
     <title>E-Wallet</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <header>
@@ -17,20 +16,10 @@
 
           <span style="margin-left: 14px">E-Wallet</span>
         </div>
-        <!-- <button class="hamburger">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="#fff"
-            stroke-width="2">
-            <path d="M4 6h16M4 12h16M4 18h16" />
-          </svg>
-        </button> -->
+
         <div class="nav-dropdown">
           <ul>
-            <li><a href="#">Sign In</a></li>
+            <li><a href="/login.html">Sign In</a></li>
             <li
               style="
                 padding-left: 18px;
@@ -43,7 +32,7 @@
                 align-items: center;
                 gap: 6px;
               ">
-              <a style="color: #3969fd" href="#">Sign Up</a>
+              <a style="color: #3969fd" href="/register.html">Sign Up</a>
             </li>
           </ul>
         </div>
@@ -62,18 +51,14 @@
             Simplify Your Life with Secure and Convenient Mobile Payments
           </p>
           <div class="cta-buttons">
-            <div class="cta-button">
-              <div class="icon">
-                <img src="./assets/gplay.png" alt="" srcset="" />
-              </div>
+            <button class="cta-button">
+              <img src="./assets/gplay.png" alt="" srcset="" />
               <p class="cta-text">Play Store</p>
-            </div>
-            <div class="cta-button">
-              <div class="icon">
-                <img src="./assets/astore.png" alt="" srcset="" />
-              </div>
+            </button>
+            <button class="cta-button">
+              <img src="./assets/astore.png" alt="" srcset="" />
               <p class="cta-text">Apps Store</p>
-            </div>
+            </button>
           </div>
           <div class="stats">
             <div class="number">
@@ -252,7 +237,7 @@
               <div class="feature-label">User Friendly</div>
             </div>
           </div>
-          <div class="get-started-button">Get Started</div>
+          <button class="get-started-button">Get Started</button>
         </div>
       </div>
     </section>
@@ -267,35 +252,227 @@
       <div class="partner-logos">
         <div class="logo-item">
           <div class="logo-container">
-            <div class="logo logo-1"></div>
+            <img src="assets/microsoft.png" class="logo logo-2" />
+          </div>
+        </div>
+
+        <div class="logo-item">
+          <div class="logo-container">
+            <img src="assets/dropbox.png" class="logo logo-2" />
           </div>
         </div>
         <div class="logo-item">
           <div class="logo-container">
-            <div class="logo logo-2"></div>
+            <img src="assets/h&m.png" class="logo logo-2" />
           </div>
         </div>
         <div class="logo-item">
           <div class="logo-container">
-            <div class="logo logo-3"></div>
+            <img src="assets/airbnb.png" class="logo logo-2" />
           </div>
         </div>
         <div class="logo-item">
           <div class="logo-container">
-            <div class="logo logo-4"></div>
+            <img src="assets/cannon.png" class="logo logo-2" />
           </div>
         </div>
         <div class="logo-item">
           <div class="logo-container">
-            <div class="logo logo-5"></div>
-          </div>
-        </div>
-        <div class="logo-item">
-          <div class="logo-container">
-            <div class="logo logo-6"></div>
+            <img src="assets/dell.png" class="logo logo-2" />
           </div>
         </div>
       </div>
     </section>
+
+    <section class="testimoni-section">
+      <div class="testimoni-header">
+        <h2>What Our Users Are Saying</h2>
+        <p>
+          Ready to experience the future of payments? Download e-wallet now and
+          enjoy a world of convenience at your fingertips.
+        </p>
+      </div>
+      <div class="testimoni-content">
+        <div class="testimoni-item">
+          <img
+            src="https://randomuser.me/api/portraits/men/21.jpg"
+            alt="James Bond" />
+          <h3>James Bond</h3>
+          <div class="rating">
+            <div class="star">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.1891 5.13128L9.2219 4.55472L7.44847 0.959405C7.40003 0.860968 7.32034 0.78128 7.2219 0.732843C6.97503 0.610968 6.67503 0.71253 6.55159 0.959405L4.77815 4.55472L0.810967 5.13128C0.701592 5.14691 0.601592 5.19847 0.525029 5.27659C0.432469 5.37173 0.381465 5.49972 0.383223 5.63244C0.384981 5.76516 0.439357 5.89176 0.534404 5.98441L3.40472 8.78284L2.72659 12.7344C2.71069 12.8263 2.72086 12.9209 2.75595 13.0073C2.79105 13.0937 2.84966 13.1686 2.92514 13.2234C3.00062 13.2783 3.08995 13.3108 3.183 13.3175C3.27605 13.3241 3.3691 13.3045 3.45159 13.261L7.00003 11.3953L10.5485 13.261C10.6453 13.3125 10.7578 13.3297 10.8657 13.311C11.1375 13.2641 11.3203 13.0063 11.2735 12.7344L10.5953 8.78284L13.4657 5.98441C13.5438 5.90784 13.5953 5.80784 13.611 5.69847C13.6532 5.42503 13.4625 5.17191 13.1891 5.13128Z"
+                  fill="#FF8906" />
+              </svg>
+            </div>
+            <div class="star">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.1891 5.13128L9.2219 4.55472L7.44847 0.959405C7.40003 0.860968 7.32034 0.78128 7.2219 0.732843C6.97503 0.610968 6.67503 0.71253 6.55159 0.959405L4.77815 4.55472L0.810967 5.13128C0.701592 5.14691 0.601592 5.19847 0.525029 5.27659C0.432469 5.37173 0.381465 5.49972 0.383223 5.63244C0.384981 5.76516 0.439357 5.89176 0.534404 5.98441L3.40472 8.78284L2.72659 12.7344C2.71069 12.8263 2.72086 12.9209 2.75595 13.0073C2.79105 13.0937 2.84966 13.1686 2.92514 13.2234C3.00062 13.2783 3.08995 13.3108 3.183 13.3175C3.27605 13.3241 3.3691 13.3045 3.45159 13.261L7.00003 11.3953L10.5485 13.261C10.6453 13.3125 10.7578 13.3297 10.8657 13.311C11.1375 13.2641 11.3203 13.0063 11.2735 12.7344L10.5953 8.78284L13.4657 5.98441C13.5438 5.90784 13.5953 5.80784 13.611 5.69847C13.6532 5.42503 13.4625 5.17191 13.1891 5.13128Z"
+                  fill="#FF8906" />
+              </svg>
+            </div>
+            <div class="star">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.1891 5.13128L9.2219 4.55472L7.44847 0.959405C7.40003 0.860968 7.32034 0.78128 7.2219 0.732843C6.97503 0.610968 6.67503 0.71253 6.55159 0.959405L4.77815 4.55472L0.810967 5.13128C0.701592 5.14691 0.601592 5.19847 0.525029 5.27659C0.432469 5.37173 0.381465 5.49972 0.383223 5.63244C0.384981 5.76516 0.439357 5.89176 0.534404 5.98441L3.40472 8.78284L2.72659 12.7344C2.71069 12.8263 2.72086 12.9209 2.75595 13.0073C2.79105 13.0937 2.84966 13.1686 2.92514 13.2234C3.00062 13.2783 3.08995 13.3108 3.183 13.3175C3.27605 13.3241 3.3691 13.3045 3.45159 13.261L7.00003 11.3953L10.5485 13.261C10.6453 13.3125 10.7578 13.3297 10.8657 13.311C11.1375 13.2641 11.3203 13.0063 11.2735 12.7344L10.5953 8.78284L13.4657 5.98441C13.5438 5.90784 13.5953 5.80784 13.611 5.69847C13.6532 5.42503 13.4625 5.17191 13.1891 5.13128Z"
+                  fill="#FF8906" />
+              </svg>
+            </div>
+            <div class="star">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.1891 5.13128L9.2219 4.55472L7.44847 0.959405C7.40003 0.860968 7.32034 0.78128 7.2219 0.732843C6.97503 0.610968 6.67503 0.71253 6.55159 0.959405L4.77815 4.55472L0.810967 5.13128C0.701592 5.14691 0.601592 5.19847 0.525029 5.27659C0.432469 5.37173 0.381465 5.49972 0.383223 5.63244C0.384981 5.76516 0.439357 5.89176 0.534404 5.98441L3.40472 8.78284L2.72659 12.7344C2.71069 12.8263 2.72086 12.9209 2.75595 13.0073C2.79105 13.0937 2.84966 13.1686 2.92514 13.2234C3.00062 13.2783 3.08995 13.3108 3.183 13.3175C3.27605 13.3241 3.3691 13.3045 3.45159 13.261L7.00003 11.3953L10.5485 13.261C10.6453 13.3125 10.7578 13.3297 10.8657 13.311C11.1375 13.2641 11.3203 13.0063 11.2735 12.7344L10.5953 8.78284L13.4657 5.98441C13.5438 5.90784 13.5953 5.80784 13.611 5.69847C13.6532 5.42503 13.4625 5.17191 13.1891 5.13128Z"
+                  fill="#FF8906" />
+              </svg>
+            </div>
+            <div class="star">
+              <svg
+                width="14"
+                height="14"
+                viewBox="0 0 14 14"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M13.1891 5.13128L9.2219 4.55472L7.44847 0.959405C7.40003 0.860968 7.32034 0.78128 7.2219 0.732843C6.97503 0.610968 6.67503 0.71253 6.55159 0.959405L4.77815 4.55472L0.810967 5.13128C0.701592 5.14691 0.601592 5.19847 0.525029 5.27659C0.432469 5.37173 0.381465 5.49972 0.383223 5.63244C0.384981 5.76516 0.439357 5.89176 0.534404 5.98441L3.40472 8.78284L2.72659 12.7344C2.71069 12.8263 2.72086 12.9209 2.75595 13.0073C2.79105 13.0937 2.84966 13.1686 2.92514 13.2234C3.00062 13.2783 3.08995 13.3108 3.183 13.3175C3.27605 13.3241 3.3691 13.3045 3.45159 13.261L7.00003 11.3953L10.5485 13.261C10.6453 13.3125 10.7578 13.3297 10.8657 13.311C11.1375 13.2641 11.3203 13.0063 11.2735 12.7344L10.5953 8.78284L13.4657 5.98441C13.5438 5.90784 13.5953 5.80784 13.611 5.69847C13.6532 5.42503 13.4625 5.17191 13.1891 5.13128Z"
+                  fill="#FF8906" />
+              </svg>
+            </div>
+            <span>5.0</span>
+          </div>
+          <p>
+            "I've been using the e-wallet for over two years now, and I'm very
+            satisfied with the ease of use. This has completely changed the way
+            I shop and conduct financial transactions."
+          </p>
+        </div>
+      </div>
+      <div class="testimoni-nav">
+        <div class="prev"></div>
+        <div class="next"></div>
+      </div>
+    </section>
+
+    <section class="download-section">
+      <div class="download-container">
+        <div class="download-content">
+          <h2>Download The App</h2>
+          <p>
+            Ready to experience the future of payments? Download e-wallet now
+            and enjoy a world of convenience at your fingertips.
+          </p>
+          <div class="buttons">
+            <button class="play-store">Play Store</button>
+            <button class="app-store">Apps Store</button>
+          </div>
+        </div>
+        <div class="download-image-container">
+          <img src="./assets/cta-image.png" alt="Image 1" />
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-bg">
+        <div class="footer-content footer-logo">
+          <div class="logo-wrapper">
+            <img src="./assets/logo.png" />
+            <div class="footer-logo-text">E-Wallet</div>
+          </div>
+
+          <p>
+            Clarity gives you the blocks and components you need to create a
+            truly professional website.
+          </p>
+        </div>
+        <div class="footer-content footer-in-touch">
+          <p class="content-title">Get In Touch</p>
+          <div class="contact">
+            <div class="icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M19.44 13C19.22 13 18.99 12.93 18.77 12.88C18.3245 12.7818 17.8867 12.6515 17.46 12.49C16.9961 12.3212 16.4862 12.33 16.0283 12.5146C15.5705 12.6992 15.1971 13.0466 14.98 13.49L14.76 13.94C13.786 13.3982 12.891 12.7252 12.1 11.94C11.3148 11.149 10.6418 10.254 10.1 9.27999L10.52 8.99999C10.9634 8.78291 11.3108 8.40952 11.4954 7.95168C11.68 7.49384 11.6888 6.9839 11.52 6.51999C11.3612 6.09241 11.2309 5.65479 11.13 5.20999C11.08 4.98999 11.04 4.75999 11.01 4.52999C10.8886 3.82561 10.5196 3.18773 9.96963 2.73123C9.41963 2.27473 8.72471 2.0296 8.01001 2.03999H5.01001C4.57904 2.03594 4.15226 2.1248 3.75872 2.30052C3.36518 2.47624 3.01412 2.73469 2.72944 3.05827C2.44476 3.38186 2.23314 3.76298 2.109 4.1757C1.98485 4.58842 1.95109 5.02305 2.01001 5.44999C2.54275 9.63937 4.45604 13.5319 7.44766 16.5126C10.4393 19.4934 14.3387 21.3925 18.53 21.91H18.91C19.6474 21.9111 20.3594 21.6405 20.91 21.15C21.2264 20.867 21.4791 20.5202 21.6515 20.1323C21.8239 19.7444 21.912 19.3244 21.91 18.9V15.9C21.8978 15.2054 21.6448 14.5365 21.1943 14.0077C20.7439 13.4788 20.1238 13.1226 19.44 13ZM19.94 19C19.9398 19.142 19.9094 19.2823 19.8508 19.4116C19.7922 19.5409 19.7067 19.6563 19.6 19.75C19.4886 19.847 19.358 19.9194 19.2167 19.9625C19.0754 20.0056 18.9266 20.0183 18.78 20C15.0349 19.5198 11.5562 17.8065 8.89273 15.1303C6.22921 12.4541 4.53242 8.96733 4.07001 5.21999C4.05409 5.07351 4.06804 4.92532 4.11101 4.78438C4.15398 4.64344 4.22508 4.51268 4.32001 4.39999C4.41372 4.29332 4.52907 4.20783 4.65839 4.14921C4.78771 4.09058 4.92802 4.06017 5.07001 4.05999H8.07001C8.30256 4.05482 8.52963 4.13087 8.71215 4.27506C8.89467 4.41925 9.02122 4.62256 9.07001 4.84999C9.11001 5.12332 9.16001 5.39332 9.22001 5.65999C9.33553 6.18713 9.48927 6.70517 9.68001 7.20999L8.28001 7.85999C8.16031 7.91491 8.05263 7.99294 7.96317 8.08959C7.8737 8.18623 7.80421 8.2996 7.75868 8.42318C7.71315 8.54677 7.69248 8.67812 7.69786 8.80971C7.70323 8.9413 7.73455 9.07054 7.79001 9.18999C9.22921 12.2727 11.7073 14.7508 14.79 16.19C15.0335 16.29 15.3065 16.29 15.55 16.19C15.6747 16.1454 15.7893 16.0764 15.8872 15.9872C15.985 15.8979 16.0642 15.7901 16.12 15.67L16.74 14.27C17.257 14.4549 17.7846 14.6085 18.32 14.73C18.5867 14.79 18.8567 14.84 19.13 14.88C19.3574 14.9288 19.5607 15.0553 19.7049 15.2378C19.8491 15.4204 19.9252 15.6474 19.92 15.88L19.94 19Z"
+                  fill="white" />
+              </svg>
+            </div>
+            <p>+62 5637 8882 9901</p>
+          </div>
+          <div class="contact">
+            <div class="icon">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_1_219)">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.625 3C1.17525 3 6.75209e-09 4.17525 6.75209e-09 5.625V6.72866C-0.000244435 6.74219 -0.00024385 6.75571 6.75209e-09 6.76923V18.375C6.75209e-09 19.8248 1.17525 21 2.625 21H21.375C22.8248 21 24 19.8248 24 18.375V6.76898C24.0003 6.75564 24.0003 6.74227 24 6.72891V5.625C24 4.17525 22.8248 3 21.375 3H2.625ZM21.75 6.10544V5.625C21.75 5.4179 21.5821 5.25 21.375 5.25H2.625C2.4179 5.25 2.25 5.4179 2.25 5.625V6.10544L12 11.8209L21.75 6.10544ZM2.25 8.71353V18.375C2.25 18.5822 2.4179 18.75 2.625 18.75H21.375C21.5821 18.75 21.75 18.5822 21.75 18.375V8.71353L12.5689 14.0955C12.2176 14.3015 11.7824 14.3015 11.4311 14.0955L2.25 8.71353Z"
+                    fill="white" />
+                </g>
+                <defs>
+                  <clipPath id="clip0_1_219">
+                    <rect width="24" height="24" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+            <p>contact@zwallet.com</p>
+          </div>
+        </div>
+        <div class="footer-content footer-in-touch">
+          <p class="content-title">Social Media</p>
+          <div class="contact">
+            <div class="icon">
+              <img src="./assets/social.png" alt="social media" srcset="" />
+            </div>
+          </div>
+        </div>
+        <div class="footer-content footer-nesletter">
+          <p class="content-title">Newsletter</p>
+          <div class="form">
+            <input
+              type="email"
+              id="email"
+              class="email-form"
+              placeholder="Enter Your Email"
+              required />
+          </div>
+          <button class="newsletter-btn">Play Store</button>
+        </div>
+      </div>
+      <div style="width: 100%; height: 0px; border: 1px white solid"></div>
+      <div class="footer-copyright">
+        © Copyright 2022, All Rights Reserved by ClarityUI
+      </div>
+    </footer>
   </body>
 </html>

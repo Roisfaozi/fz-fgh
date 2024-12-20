@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transaction History Dashboard</title>
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/dashboard-layout.css" />
+    <link rel="stylesheet" href="/styles/transaction-history.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body>
+    <header class="dashboard-header">
+      <div class="balance-info">
+        <img src="./assets/logo.png" alt="Logo" />
+        <span style="margin-left: 14px">E-Wallet</span>
+      </div>
+      <div class="user-section">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-shopping-cart"></i>
+        <img src="./assets/dummy.png" alt="User" />
+        <i class="fa-solid fa-chevron-down"></i>
+        <p class="name">
+          Hello, <br />
+          <span>Ghaluh Wizard</span>
+        </p>
+      </div>
+    </header>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <ul>
+          <li class="active">
+            <a href="/dashboard.html"
+              ><i class="fas fa-chart-pie"></i> Dashboard</a
+            >
+          </li>
+          <li class="">
+            <a href="/transfer.html"
+              ><i class="fas fa-paper-plane"></i> Transfer</a
+            >
+          </li>
+          <li class="">
+            <a href="/transaction-history.html"
+              ><i class="fas fa-history"></i> History</a
+            >
+          </li>
+          <li class="">
+            <a href="/top-up.html"><i class="fas fa-plus-circle"></i> Top Up</a>
+          </li>
+          <li class="">
+            <a href="/profile.html"><i class="fas fa-user"></i> Profile</a>
+          </li>
+          <li class="" class="logout">
+            <a href="/login.html"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="container">
+          <div class="cantainer-title">
+            <div>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M2.90912 3.36365V7H6.5455"
+                  stroke="url(#paint0_linear_40_388)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2C8.299 2 5.06755 4.01056 3.33839 6.99905"
+                  stroke="url(#paint1_linear_40_388)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M12.0025 6L12.0019 12.0044L16.2416 16.2441"
+                  stroke="url(#paint2_linear_40_388)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <defs>
+                  <linearGradient
+                    id="paint0_linear_40_388"
+                    x1="4.72731"
+                    y1="3.36365"
+                    x2="4.72731"
+                    y2="7"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#396AFC" />
+                    <stop offset="1" stop-color="#2948FF" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint1_linear_40_388"
+                    x1="12"
+                    y1="2"
+                    x2="12"
+                    y2="22"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#396AFC" />
+                    <stop offset="1" stop-color="#2948FF" />
+                  </linearGradient>
+                  <linearGradient
+                    id="paint2_linear_40_388"
+                    x1="14.1217"
+                    y1="6"
+                    x2="14.1217"
+                    y2="16.2441"
+                    gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#396AFC" />
+                    <stop offset="1" stop-color="#2948FF" />
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <h2>History Transaction</h2>
+          </div>
+
+          <!-- Search Box -->
+          <div class="table-title">
+            <h3>Find Transaction</h3>
+            <div class="search-box">
+              <input
+                type="text"
+                id="searchInput"
+                placeholder="Enter Number or Full Name" />
+              <button onclick="searchTransaction()">Search</button>
+            </div>
+          </div>
+
+          <!-- Transaction Table -->
+          <div class="table-container">
+            <table id="transactionTable">
+              <thead>
+                <tr>
+                  <th>Photo</th>
+                  <th>Name</th>
+                  <th>Number</th>
+                  <th>Amount</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="transactionBody">
+                <!-- Data will be injected here -->
+              </tbody>
+            </table>
+          </div>
+          <div class="pagination" id="paginationControls"></div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Chart JS -->
+    <script>
+      // Data Dummy
+      const transactions = [
+        {
+          photo: 'https://randomuser.me/api/portraits/men/20.jpg',
+          name: 'Ghaluh 1',
+          number: '082116304337',
+          amount: 50000,
+          status: 'success',
+        },
+        {
+          photo: 'https://randomuser.me/api/portraits/men/25.jpg',
+          name: 'Cameron Williamson',
+          number: '(308) 555-0121',
+          amount: 50000,
+          status: 'failed',
+        },
+        {
+          photo: 'https://randomuser.me/api/portraits/women/69.jpg',
+          name: 'Cody Fisher',
+          number: '(704) 555-0127',
+          amount: 50000,
+          status: 'success',
+        },
+        {
+          photo: 'https://randomuser.me/api/portraits/women/79.jpg',
+          name: 'Kristin Watson',
+          number: '(603) 555-0123',
+          amount: 50000,
+          status: 'failed',
+        },
+        {
+          photo: 'https://randomuser.me/api/portraits/men/16.jpg',
+          name: 'Floyd Miles',
+          number: '(671) 555-0110',
+          amount: 50000,
+          status: 'success',
+        },
+        {
+          photo: 'https://randomuser.me/api/portraits/men/19.jpg',
+          name: 'Wade Warren',
+          number: '(225) 555-0118',
+          amount: 50000,
+          status: 'failed',
+        },
+        {
+          photo: 'https://randomuser.me/api/portraits/women/82.jpg',
+          name: 'Savannah Nguyen',
+          number: '(217) 555-0113',
+          amount: 50000,
+          status: 'success',
+        },
+      ]
+
+      const transactionBody = document.getElementById('transactionBody')
+      const paginationControls = document.getElementById('paginationControls')
+      const itemsPerPage = 10
+      let currentPage = 1
+
+      function renderTransactions(data, page = 1) {
+        transactionBody.innerHTML = ''
+        const start = (page - 1) * itemsPerPage
+        const end = start + itemsPerPage
+        const paginatedData = data.slice(start, end)
+
+        paginatedData.forEach((transaction, index) => {
+          const row = `
+                    <tr>
+                        <td><img src="${transaction.photo}" alt="${
+            transaction.name
+          }"></td>
+                        <td>${transaction.name}</td>
+                        <td>${transaction.number}</td>
+                        <td class="${
+                          transaction.status === 'success' ? 'green' : 'red'
+                        }">
+                            Rp.${transaction.amount.toLocaleString()}
+                        </td>
+                        <td><span class="delete-btn" onclick="deleteTransaction(${index})"><svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M20.7496 5.25L4.24963 5.25001" stroke="#4F5665" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M10.25 9.75V15.75" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M14.75 9.75V15.75" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.2496 5.25V19.5C19.2496 19.6989 19.1706 19.8897 19.03 20.0303C18.8893 20.171 18.6985 20.25 18.4996 20.25H6.49963C6.30072 20.25 6.10996 20.171 5.9693 20.0303C5.82865 19.8897 5.74963 19.6989 5.74963 19.5V5.25" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M16.25 5.25V3.75C16.25 3.35218 16.092 2.97064 15.8107 2.68934C15.5294 2.40804 15.1478 2.25 14.75 2.25H10.25C9.85218 2.25 9.47064 2.40804 9.18934 2.68934C8.90804 2.97064 8.75 3.35218 8.75 3.75V5.25" stroke="#D00000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></span></td>
+                    </tr>
+                `
+          transactionBody.innerHTML += row
+        })
+
+        renderPagination(data.length)
+      }
+
+      function renderPagination(totalItems) {
+        paginationControls.innerHTML = ''
+        const totalPages = Math.ceil(totalItems / itemsPerPage)
+
+        for (let i = 1; i <= totalPages; i++) {
+          const button = document.createElement('button')
+          button.textContent = i
+          button.className = i === currentPage ? 'active' : ''
+          button.onclick = () => {
+            currentPage = i
+            renderTransactions(transactions, currentPage)
+          }
+          paginationControls.appendChild(button)
+        }
+      }
+
+      function deleteTransaction(index) {
+        if (confirm('Are you sure you want to delete this transaction?')) {
+          transactions.splice(index, 1) // Remove 1 item at index
+          renderTransactions(transactions, currentPage)
+        }
+      }
+
+      function searchTransaction() {
+        const searchValue = document
+          .getElementById('searchInput')
+          .value.toLowerCase()
+        const filteredTransactions = transactions.filter(
+          (transaction) =>
+            transaction.name.toLowerCase().includes(searchValue) ||
+            transaction.number.includes(searchValue)
+        )
+        currentPage = 1 // Reset to page 1
+        renderTransactions(filteredTransactions, currentPage)
+      }
+
+      renderTransactions(transactions, currentPage)
+    </script>
+
+    <script>
+      function aktifkanAsidebar() {
+        const sidebar = document.querySelector('.sidebar ul')
+        const links = sidebar.querySelectorAll('li')
+
+        links.forEach((link) => {
+          const href = link.querySelector('a').getAttribute('href')
+          if (window.location.pathname === href) {
+            link.classList.add('active')
+          } else {
+            link.classList.remove('active')
+          }
+        })
+      }
+
+      aktifkanAsidebar()
+    </script>
+  </body>
+</html>

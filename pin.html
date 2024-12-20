@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>E-Wallet Dashboard</title>
+    <link rel="stylesheet" href="/assets/reset.css" />
+    <link rel="stylesheet" href="/assets/dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div class="dashboard-container">
+      <aside class="sidebar">
+        <div class="logo">E-Wallet</div>
+        <nav>
+          <ul>
+            <li class="active">
+              <a href="/dashboard.html"
+                ><i class="fas fa-chart-pie"></i> Dashboard</a
+              >
+            </li>
+            <li class="">
+              <a href="/transfer.html"
+                ><i class="fas fa-paper-plane"></i> Transfer</a
+              >
+            </li>
+            <li class="">
+              <a href="/transaction-history.html"
+                ><i class="fas fa-history"></i> History</a
+              >
+            </li>
+            <li class="">
+              <a href="/top-up.html"
+                ><i class="fas fa-plus-circle"></i> Top Up</a
+              >
+            </li>
+            <li class="">
+              <a href="/profile.html"><i class="fas fa-user"></i> Profile</a>
+            </li>
+            <li class="" class="logout">
+              <a href="/login.html"
+                ><i class="fas fa-sign-out-alt"></i> Keluar</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <div class="logout">
+          <a href="#"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <header>
+          <h1>Dashboard</h1>
+          <div class="user-profile">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-shopping-cart"></i>
+            <img src="https://via.placeholder.com/40" alt="Profile" />
+          </div>
+        </header>
+
+        <!-- Balance and Fast Service -->
+        <section class="summary">
+          <div class="balance-card">
+            <h3>Balance</h3>
+            <h2>Rp.120.000</h2>
+            <p>Income <span class="income">Rp.200.000 +2%</span></p>
+            <p>Expense <span class="expense">Rp.100.000 +5%</span></p>
+          </div>
+          <div class="fast-service">
+            <h3>Fast Service</h3>
+            <div class="buttons">
+              <button class="topup-btn">Top Up</button>
+              <button class="transfer-btn">Transfer</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Chart and Transaction -->
+        <section class="main-section">
+          <div class="chart">
+            <h3>Financial Chart</h3>
+            <canvas id="financialChart"></canvas>
+          </div>
+
+          <div class="transaction-history">
+            <h3>Transaction History <span>See All</span></h3>
+            <ul>
+              <li>
+                <img src="https://via.placeholder.com/40" alt="Profile" />
+                <div>
+                  <p>Robert Fox <span>Transfer</span></p>
+                  <p class="income">+Rp50.000</p>
+                </div>
+              </li>
+              <li>
+                <img src="https://via.placeholder.com/40" alt="Profile" />
+                <div>
+                  <p>Floyd Miles <span>Send</span></p>
+                  <p class="expense">-Rp50.000</p>
+                </div>
+              </li>
+              <li>
+                <img src="https://via.placeholder.com/40" alt="Profile" />
+                <div>
+                  <p>Ujang <span>Send</span></p>
+                  <p class="expense">-Rp50.000</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById('financialChart').getContext('2d')
+      const chart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+          datasets: [
+            {
+              label: 'Income',
+              data: [20000, 75000, 80000, 30000, 10000, 60000, 0],
+              backgroundColor: 'blue',
+            },
+            {
+              label: 'Expense',
+              data: [15000, 50000, 70000, 25000, 5000, 40000, 0],
+              backgroundColor: 'red',
+            },
+          ],
+        },
+      })
+    </script>
+  </body>
+</html>

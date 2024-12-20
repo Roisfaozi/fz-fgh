@@ -1,0 +1,126 @@
+.container {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  grid-area: container;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cantainer-title {
+  display: flex;
+  gap: 10px;
+}
+
+.cantainer-title h2 {
+  color: #0b132a;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+.table-title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.table-title H3 {
+  color: #0b132a;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.search-box {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+}
+
+.search-box button {
+  height: 45px;
+  padding: 4px 12px 4px 8px;
+  align-items: center;
+  border-radius: 6px;
+  background: #2948ff;
+  color: #fff;
+}
+
+input {
+  width: 300px;
+  padding: 10px !important;
+  margin-right: 10px;
+  border-radius: 6px;
+  border: 1px solid #e8e8e8 !important;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #f1f1f1;
+}
+tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+tbody tr:nth-child(odd) {
+  background: #fff;
+}
+
+.green {
+  color: #1ec15f;
+}
+
+.red {
+  color: #d00000;
+}
+
+.delete-btn {
+  color: red;
+  cursor: pointer;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+@media (max-width: 768px) {
+  tbody tr td:nth-child(1),
+  thead tr th:nth-child(1) {
+    display: none;
+  }
+  .table-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .search-box button {
+    height: 35px;
+  }
+
+  input {
+    width: 100%;
+  }
+}

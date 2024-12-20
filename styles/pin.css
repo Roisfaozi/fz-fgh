@@ -1,0 +1,194 @@
+/* Reset Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #397eff;
+  min-height: 100vh;
+}
+
+/* Container Utama */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 100vh;
+}
+
+/* Form Section */
+.form-section {
+  flex: 1;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0px 40px 40px 0px;
+  background: #fff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: #4a90ff;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.logo .icon {
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* PIN Input */
+.pin-input {
+  display: flex;
+  gap: 5px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 80%;
+}
+
+.pin-input input {
+  width: 40px;
+  height: 50px;
+  text-align: center;
+  font-size: 24px;
+  border-bottom: 1px solid #ddd;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.pin-input input:focus {
+  border-color: #4a90ff;
+}
+
+/* Submit Button */
+.submit-btn {
+  background: #4a90ff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #397eff;
+}
+
+/* Reset Link */
+.reset-link {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.reset-link a {
+  color: #4a90ff;
+  text-decoration: none;
+}
+
+.reset-link a:hover {
+  text-decoration: underline;
+}
+
+/* Illustration Section */
+.illustration-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  background: #4a90ff;
+  padding: 20px;
+}
+
+.illustration-section img {
+  width: 100%;
+  max-width: 600px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  body {
+    background: #397eff;
+    background: radial-gradient(circle, #4a90ff, #397eff);
+    min-height: 100vh;
+    padding: 10px;
+  }
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .form-section {
+    padding: 20px;
+    border-radius: 40px;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  .pin-input input {
+    width: 35px;
+    height: 45px;
+    font-size: 20px;
+  }
+
+  .illustration-section {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .pin-input input {
+    width: 30px;
+    height: 40px;
+    font-size: 18px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .reset-link {
+    font-size: 12px;
+  }
+}

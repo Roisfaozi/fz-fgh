@@ -1,0 +1,262 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  max-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  border: 1px solid #dedede !important;
+}
+
+header .user-section {
+  display: flex;
+  gap: 22px;
+  align-items: center;
+}
+
+header .user-section img {
+  border-radius: 50%;
+  height: 48px;
+}
+
+header .user-section .name {
+  display: none;
+  color: #fff;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 200% */
+  letter-spacing: -0.072px;
+}
+
+header .user-section .name span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.balance-info {
+  display: flex;
+  align-items: center;
+}
+
+.balance-info img {
+  height: 30px;
+}
+
+.balance-info span {
+  color: #2948ff;
+  font-family: 'Nunito Sans';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.dashboard-container {
+  display: flex;
+  max-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #ffffff;
+  width: 240px;
+  height: 100vh;
+  padding: 24px 10px 24px 42px;
+  border-right: 1px solid #dedede !important;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  border-radius: 3px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #4f5665;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 48px;
+  padding: 3px;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 150% */
+  letter-spacing: -0.096px;
+}
+.sidebar ul li:last-child a {
+  color: #d00000;
+}
+.sidebar ul li.active a,
+.sidebar ul li a:hover {
+  border-radius: 6px;
+  border-left: 4px solid #2948ff;
+  background: rgba(41, 72, 255, 0.1);
+  color: #2948ff;
+}
+
+/* Main Content */
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  padding: 44px;
+  grid-template-areas:
+    'container container container container'
+    'container container container container'
+    'container container container container';
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .main-content {
+    grid-template-columns: 1fr 1fr; /* Kurangi jumlah kolom */
+    grid-template-areas:
+      'balance service'
+      'chart chart'
+      'history history';
+  }
+
+  .service,
+  .balance,
+  .chart,
+  .history {
+    padding: 15px; /* Kurangi padding */
+  }
+
+  .sidebar {
+    width: 80px; /* Sidebar lebih kecil */
+    text-align: center;
+  }
+
+  .sidebar ul li a {
+    justify-content: center;
+    gap: 0; /* Hapus jarak antara ikon dan teks */
+  }
+
+  .sidebar ul li a span {
+    display: none; /* Hilangkan teks di sidebar */
+  }
+}
+
+/* Responsive untuk Mobile (Max Width 768px) */
+@media (max-width: 768px) {
+  .dashboard-header,
+  header {
+    background: #2948ff;
+    padding: 10px;
+    border: none !important;
+    height: 150px;
+    align-items: start;
+  }
+  .dashboard-container {
+    flex-direction: column; /* Sidebar dan konten dalam satu kolom */
+    position: relative;
+  }
+
+  .balance-info {
+    display: none;
+  }
+
+  header .user-section {
+    align-items: start;
+    justify-content: start;
+  }
+
+  header .user-section .name {
+    display: block;
+  }
+
+  .user-section > i {
+    display: none;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: 60px;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    padding: 0;
+    bottom: 0;
+    z-index: +10;
+  }
+
+  .sidebar ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 0;
+  }
+
+  .sidebar ul li {
+    margin: 0;
+    flex: 1;
+    text-align: center;
+  }
+
+  .sidebar ul li a {
+    padding: 10px 5px;
+    flex-direction: column; /* Stack icon and text */
+    font-size: 12px;
+    color: #555;
+  }
+
+  .sidebar ul li a span {
+    display: block;
+    margin-top: 5px;
+  }
+  .sidebar ul li.active a,
+  .sidebar ul li a:hover {
+    border-bottom: 4px solid #2948ff;
+    border-left: none;
+  }
+
+  .sidebar ul li a i {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column; /* Satu kolom pada konten utama */
+    padding: 10px 10px 50px 10px;
+    position: absolute;
+    top: -80px;
+  }
+
+  .card {
+    margin-bottom: 10px; /* Berikan jarak antar card */
+    padding: 10px;
+  }
+
+  .service {
+    justify-content: center;
+  }
+}
+
+/* Responsive untuk Mobile Kecil (Max Width 480px) */
+@media (max-width: 480px) {
+  .user-info img {
+    width: 40px; /* Ukuran gambar lebih kecil */
+  }
+}

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Dashboard</title>
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/dashboard-layout.css" />
+    <link rel="stylesheet" href="/styles/profile.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body>
+    <header class="dashboard-header">
+      <div class="balance-info">
+        <img src="./assets/logo.png" alt="Logo" />
+        <span style="margin-left: 14px">E-Wallet</span>
+      </div>
+      <div class="user-section">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-shopping-cart"></i>
+        <img src="./assets/dummy.png" alt="User" />
+        <i class="fa-solid fa-chevron-down"></i>
+        <p class="name">
+          Hello, <br />
+          <span>Ghaluh Wizard</span>
+        </p>
+      </div>
+    </header>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <ul>
+          <li class="active">
+            <a href="/dashboard.html"
+              ><i class="fas fa-chart-pie"></i> Dashboard</a
+            >
+          </li>
+          <li class="">
+            <a href="#"><i class="fas fa-paper-plane"></i> Transfer</a>
+          </li>
+          <li class="">
+            <a href="/transaction-history.html"
+              ><i class="fas fa-history"></i> History</a
+            >
+          </li>
+          <li class="">
+            <a href="#"><i class="fas fa-plus-circle"></i> Top Up</a>
+          </li>
+          <li class="/profile.html">
+            <a href="#"><i class="fas fa-user"></i> Profile</a>
+          </li>
+          <li class="" class="logout">
+            <a href="#"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="container">
+          <div class="cantainer-title">
+            <div>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.59151 15.2068C13.2805 15.2068 16.4335 15.7658 16.4335 17.9988C16.4335 20.2318 13.3015 20.8068 9.59151 20.8068C5.90151 20.8068 2.74951 20.2528 2.74951 18.0188C2.74951 15.7848 5.88051 15.2068 9.59151 15.2068Z"
+                  stroke="#2948FF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.59157 12.0198C7.16957 12.0198 5.20557 10.0568 5.20557 7.63476C5.20557 5.21276 7.16957 3.24976 9.59157 3.24976C12.0126 3.24976 13.9766 5.21276 13.9766 7.63476C13.9856 10.0478 12.0356 12.0108 9.62257 12.0198H9.59157Z"
+                  stroke="#2948FF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M16.4832 10.8815C18.0842 10.6565 19.3172 9.28253 19.3202 7.61953C19.3202 5.98053 18.1252 4.62053 16.5582 4.36353"
+                  stroke="#2948FF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M18.5955 14.7322C20.1465 14.9632 21.2295 15.5072 21.2295 16.6272C21.2295 17.3982 20.7195 17.8982 19.8955 18.2112"
+                  stroke="#2948FF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h2>Profile</h2>
+          </div>
+          <div class="profile-container">
+            <h2>Profile Picture</h2>
+            <form class="profile-form">
+              <div class="profile-picture">
+                <div class="profile-wrapper">
+                  <div class="profile-img">
+                    <input type="file" id="profile-image" accept="image/*" />
+                    <label for="profile-image">
+                      <img
+                        src=""
+                        alt="Profile Image"
+                        id="profile-image-preview" />
+                    </label>
+                  </div>
+                  <div class="profile-actions">
+                    <a class="btn change-btn">
+                      Change Profile
+                      <input type="file" id="profile-image" accept="image/*" />
+                    </a>
+                    <button class="btn delete-btn">Delete Profile</button>
+                  </div>
+                </div>
+                <small class="profile-note"
+                  >The profile picture must be 512 x 512 pixels or less</small
+                >
+              </div>
+
+              <!-- Form Fields -->
+              <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <span class="icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M8 10C10.2091 10 12 8.20914 12 6C12 3.79086 10.2091 2 8 2C5.79086 2 4 3.79086 4 6C4 8.20914 5.79086 10 8 10Z"
+                      stroke="#4F5665"
+                      stroke-miterlimit="10" />
+                    <path
+                      d="M1.93677 13.4994C2.55149 12.4354 3.4354 11.5519 4.49969 10.9376C5.56399 10.3234 6.77119 9.99999 8.00003 10C9.22886 10 10.4361 10.3234 11.5003 10.9377C12.5646 11.552 13.4485 12.4355 14.0632 13.4995"
+                      stroke="#4F5665"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <input
+                  type="text"
+                  id="full-name"
+                  placeholder="Enter Full Name" />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <span class="icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M5.77977 7.80095C6.29842 8.86129 7.15792 9.71689 8.2206 10.2307C8.29835 10.2675 8.38436 10.2835 8.47015 10.277C8.55595 10.2705 8.63857 10.2418 8.7099 10.1937L10.2746 9.15028C10.3438 9.10414 10.4235 9.07598 10.5063 9.06838C10.5891 9.06077 10.6725 9.07394 10.749 9.10671L13.6763 10.3613C13.7757 10.4035 13.8588 10.4769 13.9128 10.5705C13.9669 10.664 13.9892 10.7726 13.9762 10.8798C13.8837 11.6038 13.5304 12.2693 12.9826 12.7516C12.4347 13.2339 11.7299 13.5 11 13.5C8.74566 13.5 6.58365 12.6045 4.98959 11.0104C3.39553 9.41635 2.5 7.25434 2.5 5C2.50004 4.27011 2.76612 3.56526 3.24843 3.01742C3.73073 2.46959 4.39618 2.11634 5.12019 2.02381C5.22745 2.01083 5.33602 2.03306 5.42955 2.08715C5.52307 2.14124 5.59649 2.22426 5.63873 2.3237L6.89439 5.25357C6.92687 5.32935 6.9401 5.41199 6.93291 5.49413C6.92572 5.57626 6.89833 5.65535 6.85318 5.72434L5.81341 7.31307C5.76608 7.38454 5.7381 7.46706 5.73221 7.55257C5.72631 7.63809 5.7427 7.72367 5.77977 7.80095V7.80095Z"
+                      stroke="#4F5665"
+                      stroke-linecap="round"
+                      stroke-linejoin="round" />
+                  </svg>
+                </span>
+                <input
+                  type="text"
+                  id="phone"
+                  placeholder="Enter Your Number Phone" />
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <span class="icon">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_53_361)">
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M1.74988 2C0.78338 2 -0.000122066 2.7835 -0.000122066 3.75V4.48577C-0.000285027 4.49479 -0.000284637 4.50381 -0.000122066 4.51282V12.25C-0.000122066 13.2165 0.783379 14 1.74988 14H14.2499C15.2164 14 15.9999 13.2165 15.9999 12.25V4.51265C16.0001 4.50376 16.0001 4.49485 15.9999 4.48594V3.75C15.9999 2.7835 15.2164 2 14.2499 2H1.74988ZM14.4999 4.07029V3.75C14.4999 3.61193 14.388 3.5 14.2499 3.5H1.74988C1.61181 3.5 1.49988 3.61193 1.49988 3.75V4.07029L7.99988 7.88063L14.4999 4.07029ZM1.49988 5.80902V12.25C1.49988 12.3881 1.61181 12.5 1.74988 12.5H14.2499C14.388 12.5 14.4999 12.3881 14.4999 12.25V5.80902L8.37917 9.39702C8.14495 9.53432 7.85481 9.53432 7.62059 9.39702L1.49988 5.80902Z"
+                        fill="#4F5665" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_53_361">
+                        <rect width="16" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </span>
+                <input type="email" id="email" placeholder="Enter Your Email" />
+              </div>
+
+              <div class="form-group">
+                <label for="password">Password</label>
+
+                <a href="#" class="change-link">Change Password</a>
+              </div>
+
+              <div class="form-group">
+                <label for="pin">Pin</label>
+                <a href="#" class="change-link">Change Pin</a>
+              </div>
+
+              <!-- Submit Button -->
+              <div class="form-group">
+                <button class="btn submit-btn">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      function aktifkanAsidebar() {
+        const sidebar = document.querySelector('.sidebar ul')
+        const links = sidebar.querySelectorAll('li')
+        links.forEach((link) => {
+          const href = link.querySelector('a').getAttribute('href')
+          console.log(window.location.pathname, href)
+          if (window.location.pathname === href) {
+            link.classList.add('active')
+          } else {
+            link.classList.remove('active')
+          }
+        })
+      }
+
+      aktifkanAsidebar()
+    </script>
+  </body>
+</html>

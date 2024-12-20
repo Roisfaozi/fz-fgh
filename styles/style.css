@@ -1,131 +1,3 @@
-/* CSS Reset */
-
-/* Remove margins and padding from all elements */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* Remove default list styles */
-ul,
-ol {
-  list-style: none;
-}
-
-/* Remove default link styles */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Remove default font styles */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a,
-li {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: inherit;
-}
-
-/* Remove default table styles */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* Remove default button styles */
-button,
-input,
-optgroup,
-select,
-textarea {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  line-height: inherit;
-}
-
-/* Remove default text input styles */
-input[type='text'],
-input[type='password'],
-input[type='email'],
-input[type='number'],
-textarea {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Remove default button styles */
-button {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Remove default checkbox and radio button styles */
-input[type='checkbox'],
-input[type='radio'] {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Remove default select styles */
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  padding: 0;
-  margin: 0;
-}
-
-/* Remove default focus styles */
-:focus {
-  outline: none;
-}
-
-/* Remove default scrollbar styles */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #888;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
 /* Add your own styles or modifications below */
 /* CSS Reset */
 
@@ -682,8 +554,368 @@ nav a:hover {
   align-items: center;
 }
 
-.logo {
-  background-color: #4f5665;
+.logo-container img {
+  width: 73.54px;
+  height: 48.34px;
+}
+
+.testimoni-section {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.testimoni-section {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.testimoni-header {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.testimoni-header h2 {
+  font-size: 36px;
+  font-family: Montserrat;
+  font-weight: 500;
+  color: #0b132a;
+}
+
+.testimoni-header p {
+  font-size: 16px;
+  font-family: Montserrat;
+  font-weight: 400;
+  color: #4f5665;
+}
+
+.testimoni-content {
+  background: #2948ff;
+  border-radius: 16px;
+  padding: 40px 20px;
+  width: 55%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimoni-item {
+  width: 271px;
+  text-align: center;
+}
+
+.testimoni-item img {
+  width: 58px;
+  height: 58px;
+  border-radius: 9999px;
+  margin-bottom: 19px;
+}
+
+.testimoni-item h3 {
+  font-size: 18px;
+  font-family: Montserrat;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.star {
+  width: 14px;
+  height: 14x;
+  margin-right: 5px;
+}
+
+.rating span {
+  font-size: 16px;
+  font-family: Montserrat;
+  font-weight: 400;
+  color: white;
+  margin-left: 5px;
+}
+
+.testimoni-item p {
+  font-size: 16px;
+  font-family: Montserrat;
+  font-weight: 400;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.testimoni-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.prev,
+.next {
+  width: 46.92px;
+  height: 47px;
+  border-radius: 9999px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.prev {
+  background: rgba(232, 232, 232, 0.3);
+}
+
+.next {
+  background: #2948ff;
+}
+
+.prev::before,
+.next::before {
+  content: '';
+  width: 16.35px;
+  height: 16.32px;
+  transform: rotate(90deg);
+  transform-origin: 0 0;
+  border: 2px solid #0b132a;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.next::before {
+  border-color: white;
+}
+
+.download-section {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 0 30px;
+  background: rgba(232, 232, 232, 0.3);
+}
+
+.download-container {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.download-content {
+  width: 580px;
+  height: 194px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 25px;
+}
+
+.download-content h2 {
+  font-size: 36px;
+  font-family: Montserrat;
+  font-weight: 500;
+  color: #0b132a;
+}
+
+.download-content p {
+  font-size: 16px;
+  font-family: Montserrat;
+  font-weight: 400;
+  line-height: 25px;
+  color: #0b132a;
+}
+
+.buttons {
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+  width: 60%;
+}
+
+.play-store {
+  background: #2948ff;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  font-family: Plus Jakarta Sans;
+  font-weight: 500;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.play-store img {
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.app-store {
+  border: 1px #2948ff solid;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 14px;
+  font-family: Plus Jakarta Sans;
+  font-weight: 500;
+  color: #2948ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.app-store img {
+  width: 24px;
+  height: 24px;
+  position: relative;
+}
+
+.download-image-container {
+  width: 422px;
+  height: 443px;
+}
+
+/* Footer Styles */
+.footer {
+  background: #2948ff;
+  color: white;
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.footer-bg {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.footer-content {
+  padding: 20px;
+}
+
+.footer-logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo-wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-content .content-title {
+  font-size: 18px;
+  font-family: Montserrat;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 18px;
+  text-align: left;
+}
+
+.footer-content .contact {
+  margin-top: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-content .form {
+  margin-top: 10px;
+}
+
+.footer-content .form input {
+  height: 44px;
+  padding-left: 13px;
+  padding-right: 13px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  background: #fcfdfe;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px #dedede solid;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  display: inline-flex;
+  width: 100%;
+}
+
+.newsletter-btn {
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border-radius: 6px;
+  font-family: Montserrat;
+  line-height: 18px;
+  gap: 10px;
+  background-color: #fff;
+  margin-top: 10px;
+  color: #2948ff;
+}
+
+.icon img {
+  width: 222px;
+}
+
+.footer-copyright {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.footer-section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 20px 0;
+  text-transform: uppercase;
+}
+
+.footer-divider {
+  width: 80%;
+  margin: 20px auto;
+  border-top: 1px solid white;
+}
+
+.footer-logo-text {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.footer-logo p {
+  font-size: 16px;
+  line-height: 26px;
+  max-width: 300px;
+  text-align: left;
+}
+
+.download-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* Responsive styling */
@@ -775,7 +1007,8 @@ nav a:hover {
     font-size: 14px;
   }
   .service-section,
-  .description-section {
+  .description-section,
+  .testimoni-section {
     width: 100%;
     height: auto;
   }
@@ -847,6 +1080,10 @@ nav a:hover {
   .feature-label {
     font-size: 16px;
   }
+
+  .partner-section {
+    flex-direction: column;
+  }
   .partner-content h2 {
     font-size: 28px;
   }
@@ -863,7 +1100,61 @@ nav a:hover {
     width: 80px;
     height: 63px;
   }
+
+  .testimoni-section {
+    padding: 20px 10px;
+  }
+  .testimoni-content {
+    padding: 20px 10px;
+    width: 100%;
+  }
+  .testimoni-item {
+    width: 100%;
+  }
+
+  .download-section {
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+  }
+  .download-container {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    justify-content: center;
+    gap: 30px;
+  }
+  .download-content {
+    width: 100%;
+    height: auto;
+    position: relative;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .download-image-container {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .buttons {
+    width: 100%;
+  }
+
+  .footer-logo-text {
+    font-size: 28px;
+  }
+
+  .footer-logo p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .footer-bg {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
 }
+
 @media (max-width: 1024px) {
   .feature-content {
     flex-direction: column;
@@ -872,7 +1163,21 @@ nav a:hover {
   .feature-list {
     align-items: flex-start;
   }
+
+  .download-section {
+    padding: 30px;
+  }
+  .download-container {
+    flex-direction: column;
+  }
+  .download-content {
+    flex-direction: column;
+  }
+  .footer-bg {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+
 @media (max-width: 480px) {
   header {
     padding: 12px 0;
@@ -927,5 +1232,48 @@ nav a:hover {
   .logo-item {
     width: 70px;
     height: 55px;
+  }
+
+  .testimoni-section {
+    padding: 10px 5px;
+  }
+  .testimoni-content {
+    padding: 10px 5px;
+  }
+  .testimoni-item {
+    width: 100%;
+  }
+  .testimoni-header h2 {
+    font-size: 24px;
+  }
+  .testimoni-header p {
+    font-size: 14px;
+  }
+  .testimoni-item h3 {
+    font-size: 16px;
+  }
+  .testimoni-item p {
+    font-size: 14px;
+  }
+
+  .download-section {
+    width: 100%;
+    height: 100vh;
+  }
+  .download-container {
+    width: 100%;
+    height: 100%;
+  }
+  .download-content {
+    width: 100%;
+    height: auto;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+  .download-image-container {
+    width: 100%;
+    height: auto;
+    position: relative;
   }
 }
