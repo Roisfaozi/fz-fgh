@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profile Dashboard</title>
+    <style>
+      .container {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        grid-area: container;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .cantainer-title {
+        display: flex;
+        gap: 10px;
+      }
+      .profile-container {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 20px 30px;
+        border-radius: 8px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      .profile-container h2 {
+        color: #0b132a;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+      }
+
+      .cantainer-title h2 {
+        color: #0b132a;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+      }
+      .modal .container {
+        background: #fff;
+        padding: 20px 30px;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .modal .container h2 {
+        color: #4f5665;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+      .modal .container h3 {
+        color: #0b132a;
+        font-family: Montserrat;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      .modal .container p {
+        color: #4f5665;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      /* Pin Inputs */
+      .pin-inputs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        gap: 15px;
+      }
+
+      .pin-inputs input {
+        width: 40px;
+        height: 50px;
+        text-align: center;
+        font-size: 20px;
+        border-bottom: 1px solid #ddd !important;
+        border-radius: 6px;
+        outline: none;
+        transition: all 0.3s;
+      }
+
+      .pin-inputs input:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+      }
+
+      /* Button */
+      .btn {
+        width: 100%;
+        padding: 12px;
+        background: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .btn:hover {
+        background: #0056b3;
+      }
+    </style>
+    <link rel="stylesheet" href="/styles/reset.css" />
+    <link rel="stylesheet" href="/styles/dashboard-layout.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  </head>
+  <body>
+    <header class="dashboard-header">
+      <div class="balance-info">
+        <img src="./assets/logo.png" alt="Logo" />
+        <span style="margin-left: 14px">E-Wallet</span>
+      </div>
+      <div class="user-section">
+        <i class="fas fa-search"></i>
+        <i class="fas fa-shopping-cart"></i>
+        <img src="./assets/dummy.png" alt="User" />
+        <i class="fa-solid fa-chevron-down"></i>
+        <p class="name">
+          Hello, <br />
+          <span>Ghaluh Wizard</span>
+        </p>
+      </div>
+    </header>
+    <div class="dashboard-container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <ul>
+          <li class="active">
+            <a href="/dashboard.html"
+              ><i class="fas fa-chart-pie"></i> Dashboard</a
+            >
+          </li>
+          <li class="">
+            <a href="/transfer.html"
+              ><i class="fas fa-paper-plane"></i> Transfer</a
+            >
+          </li>
+          <li class="">
+            <a href="/transaction-history.html"
+              ><i class="fas fa-history"></i> History</a
+            >
+          </li>
+          <li class="">
+            <a href="#"><i class="fas fa-plus-circle"></i> Top Up</a>
+          </li>
+          <li class="/profile.html">
+            <a href="#"><i class="fas fa-user"></i> Profile</a>
+          </li>
+          <li class="" class="logout">
+            <a href="#"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+          </li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <div class="container">
+          <div class="cantainer-title">
+            <div>
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.59151 15.2068C13.2805 15.2068 16.4335 15.7658 16.4335 17.9988C16.4335 20.2318 13.3015 20.8068 9.59151 20.8068C5.90151 20.8068 2.74951 20.2528 2.74951 18.0188C2.74951 15.7848 5.88051 15.2068 9.59151 15.2068Z"
+                  stroke="#2948FF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M9.59157 12.0198C7.16957 12.0198 5.20557 10.0568 5.20557 7.63476C5.20557 5.21276 7.16957 3.24976 9.59157 3.24976C12.0126 3.24976 13.9766 5.21276 13.9766 7.63476C13.9856 10.0478 12.0356 12.0108 9.62257 12.0198H9.59157Z"
+                  stroke="#2948FF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M16.4832 10.8815C18.0842 10.6565 19.3172 9.28253 19.3202 7.61953C19.3202 5.98053 18.1252 4.62053 16.5582 4.36353"
+                  stroke="#2948FF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path
+                  d="M18.5955 14.7322C20.1465 14.9632 21.2295 15.5072 21.2295 16.6272C21.2295 17.3982 20.7195 17.8982 19.8955 18.2112"
+                  stroke="#2948FF"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h2>Profile</h2>
+          </div>
+          <div class="profile-container modal">
+            <h2>Change Password</h2>
+            <div class="container">
+              <h3>Change Pin 👋</h3>
+              <p>Please save your pin because this so important.</p>
+
+              <form id="pinForm">
+                <div class="pin-inputs">
+                  <input
+                    type="password"
+                    maxlength="1"
+                    inputmode="numeric"
+                    required />
+                  <input
+                    type="password"
+                    maxlength="1"
+                    inputmode="numeric"
+                    required />
+                  <input
+                    type="password"
+                    maxlength="1"
+                    inputmode="numeric"
+                    required />
+                  <input
+                    type="password"
+                    maxlength="1"
+                    inputmode="numeric"
+                    required />
+                  <input
+                    type="password"
+                    maxlength="1"
+                    inputmode="numeric"
+                    required />
+                  <input
+                    type="password"
+                    maxlength="1"
+                    inputmode="numeric"
+                    required />
+                </div>
+                <button id="confirmModal" type="submit" class="btn">
+                  Next
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="script/script.js"></script>
+    <script src="script/change-password.js"></script>
+  </body>
+</html>

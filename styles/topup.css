@@ -1,0 +1,373 @@
+.container {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  grid-area: container;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cantainer-title {
+  display: flex;
+  gap: 10px;
+}
+
+.cantainer-title h2 {
+  color: #0b132a;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+.profile-container {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.topup-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.account-section {
+  width: 60%;
+  padding-right: 20px;
+}
+
+.account-section h2 {
+  color: #0b132a;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.account-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  background: rgba(232, 232, 232, 0.3);
+  padding: 18px;
+}
+
+.user-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.user-details {
+  line-height: 1.5;
+}
+
+.user-name {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-family: Montserrat;
+  color: #333;
+}
+
+.user-phone {
+  font-size: 14px;
+  color: #777;
+  font-family: Montserrat;
+}
+
+.verified {
+  display: inline-block;
+  margin-top: 5px;
+  background-color: #007bff;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  max-width: 80px;
+}
+
+.amount-section {
+  margin-bottom: 20px;
+}
+
+.amount-section label {
+  color: #0b132a;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+.amount-section p {
+  color: #4f5665;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.amount-section input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  margin-top: 12px;
+}
+
+.payment-method h3 {
+  color: #0b132a;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.payment-desc {
+  color: #4f5665;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin-bottom: 14px;
+}
+
+.methods {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+.method label {
+  margin-left: 8px;
+  font-size: 14px;
+}
+
+.payment-section {
+  width: 35%;
+}
+
+.payment-section h2 {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.summary {
+  background: #f8f8f8;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.summary p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+.summary p strong {
+  font-size: 16px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.discount-info {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+}
+
+/* Hide default radio button */
+input[type='radio'] {
+  display: none;
+}
+
+/* Label style */
+input[type='radio'] + label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 15px;
+  color: #4f5665;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  background: rgba(232, 232, 232, 0.3);
+}
+
+/* Hover effect */
+input[type='radio'] + label:hover {
+  border-color: #007bff;
+  box-shadow: 0 3px 6px rgba(0, 123, 255, 0.3);
+}
+
+/* Checked state */
+input[type='radio']:checked + label {
+  border-color: #007bff;
+  background: #eaf4ff;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Style for the logo */
+input[type='radio'] + label img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect for the logo */
+input[type='radio']:checked + label img {
+  border-color: #007bff;
+}
+
+@media (max-width: 1024px) {
+  .dashboard-container {
+    flex-direction: column;
+  }
+
+  .main-content {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .topup-container {
+    flex-direction: column;
+  }
+
+  .account-section,
+  .payment-section {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+/* Tablet view */
+@media (max-width: 768px) {
+  header.dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .user-section .name {
+    font-size: 14px;
+  }
+
+  .topup-container {
+    gap: 15px;
+  }
+
+  .account-section h2,
+  .payment-section h2 {
+    font-size: 16px;
+  }
+
+  .summary {
+    padding: 10px;
+  }
+
+  .summary p {
+    font-size: 13px;
+  }
+}
+
+/* Mobile view */
+@media (max-width: 480px) {
+  .dashboard-header {
+    padding: 10px;
+    flex-direction: column;
+  }
+
+  .balance-info img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .balance-info span {
+    font-size: 14px;
+  }
+
+  .user-section img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .topup-container {
+    gap: 10px;
+  }
+
+  .user-photo {
+    width: 60px;
+    height: 60px;
+  }
+
+  .user-details .user-name {
+    font-size: 14px;
+  }
+
+  .user-details .user-phone {
+    font-size: 12px;
+  }
+
+  .amount-section input {
+    font-size: 12px;
+  }
+
+  .payment-method h3 {
+    font-size: 14px;
+  }
+
+  button {
+    font-size: 14px;
+  }
+
+  .discount-info {
+    font-size: 10px;
+  }
+}

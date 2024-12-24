@@ -32,27 +32,29 @@
       <!-- Sidebar -->
       <aside class="sidebar">
         <ul>
-          <li class="active">
+          <li class="">
             <a href="/dashboard.html"
               ><i class="fas fa-chart-pie"></i> Dashboard</a
             >
           </li>
-          <li class="">
-            <a href="#"><i class="fas fa-paper-plane"></i> Transfer</a>
+          <li>
+            <a href="/transfer.html"
+              ><i class="fas fa-paper-plane"></i> Transfer</a
+            >
           </li>
-          <li class="">
+          <li>
             <a href="/transaction-history.html"
               ><i class="fas fa-history"></i> History</a
             >
           </li>
-          <li class="">
-            <a href="#"><i class="fas fa-plus-circle"></i> Top Up</a>
+          <li>
+            <a href="/top-up.html"><i class="fas fa-plus-circle"></i> Top Up</a>
           </li>
-          <li class="/profile.html">
-            <a href="#"><i class="fas fa-user"></i> Profile</a>
+          <li>
+            <a href="/profile.html"><i class="fas fa-user"></i> Profile</a>
           </li>
-          <li class="" class="logout">
-            <a href="#"><i class="fas fa-sign-out-alt"></i> Keluar</a>
+          <li class="logout">
+            <a href="/login.html"><i class="fas fa-sign-out-alt"></i> Keluar</a>
           </li>
         </ul>
       </aside>
@@ -105,21 +107,17 @@
             <form class="profile-form">
               <div class="profile-picture">
                 <div class="profile-wrapper">
-                  <div class="profile-img">
-                    <input type="file" id="profile-image" accept="image/*" />
-                    <label for="profile-image">
-                      <img
-                        src=""
-                        alt="Profile Image"
-                        id="profile-image-preview" />
-                    </label>
-                  </div>
+                  <figure class="image-container">
+                    <img id="chosen-image" src="https://i.pravatar.cc/100" />
+                  </figure>
                   <div class="profile-actions">
-                    <a class="btn change-btn">
-                      Change Profile
-                      <input type="file" id="profile-image" accept="image/*" />
-                    </a>
-                    <button class="btn delete-btn">Delete Profile</button>
+                    <input type="file" id="upload-button" accept="image/*" />
+                    <label class="btn change-btn" for="upload-button">
+                      <i class="fas fa-upload"></i> &nbsp; Choose A Photo
+                    </label>
+                    <button class="btn delete-btn" id="delete-button">
+                      <i class="fas fa-trash-can"></i> &nbsp;Delete Profile
+                    </button>
                   </div>
                 </div>
                 <small class="profile-note"
@@ -205,12 +203,14 @@
               <div class="form-group">
                 <label for="password">Password</label>
 
-                <a href="#" class="change-link">Change Password</a>
+                <a href="change-password.html" class="change-link"
+                  >Change Password</a
+                >
               </div>
 
               <div class="form-group">
                 <label for="pin">Pin</label>
-                <a href="#" class="change-link">Change Pin</a>
+                <a href="/change-pin.html" class="change-link">Change Pin</a>
               </div>
 
               <!-- Submit Button -->
@@ -222,23 +222,27 @@
         </div>
       </main>
     </div>
+    <script src="script/script.js"></script>
 
     <script>
-      function aktifkanAsidebar() {
-        const sidebar = document.querySelector('.sidebar ul')
-        const links = sidebar.querySelectorAll('li')
-        links.forEach((link) => {
-          const href = link.querySelector('a').getAttribute('href')
-          console.log(window.location.pathname, href)
-          if (window.location.pathname === href) {
-            link.classList.add('active')
-          } else {
-            link.classList.remove('active')
-          }
-        })
+      let deleteButton = document.getElementById('delete-button')
+      let uploadButton = document.getElementById('upload-button')
+      let chosenImage = document.getElementById('chosen-image')
+      let fileName = document.getElementById('file-name')
+
+      uploadButton.onchange = () => {
+        let reader = new FileReader()
+        reader.readAsDataURL(uploadButton.files[0])
+        reader.onload = () => {
+          chosenImage.setAttribute('src', reader.result)
+        }
+        fileName.textContent = uploadButton.files[0].name
       }
 
-      aktifkanAsidebar()
+      deleteButton.addEventListener('click', () => {
+        chosenImage.src = 'https://i.pravatar.cc/100'
+        chosenImage.alt = ''
+      })
     </script>
   </body>
 </html>

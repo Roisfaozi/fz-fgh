@@ -124,41 +124,95 @@ function aktifkanAsidebar() {
 
 aktifkanAsidebar()
 
-const tableRows = document.querySelectorAll('table tr')
-tableRows.forEach((row) => {
-  row.addEventListener('click', (e) => {
-    const rowData = e.target.parentNode
-    console.log(rowData)
-  })
-})
-
 document.addEventListener('DOMContentLoaded', () => {
-  const steps = document.querySelectorAll('.step')
-  const stepContents = document.querySelectorAll('.step-content')
-  const nextButtons = document.querySelectorAll('.next-btn')
+  const steps = document.querySelectorAll('.step-wrapper')
+  const stepContents = document.querySelectorAll('.content-conainer')
   const prevButtons = document.querySelectorAll('.prev-btn')
+  const submitButton = document.querySelector(`button[data-next="3"]`)
+
+  const modal = document.getElementById('confirmationModal')
+  const confirmModal = document.getElementById('confirmModal')
+
+  const tableRows = document.querySelectorAll('table tr')
+
+  tableRows.forEach((row) => {
+    row.addEventListener('click', (e) => {
+      const currentStep = document
+        .querySelector('.step-wrapper.active')
+        .getAttribute('data-step')
+      const nextStep = parseInt(currentStep) + 1
+      updateStep(nextStep)
+    })
+  })
 
   function updateStep(step) {
     steps.forEach((el) => el.classList.remove('active'))
     stepContents.forEach((el) => el.classList.remove('active'))
 
-    document.querySelector(`.step[data-step="${step}"]`).classList.add('active')
     document
-      .querySelector(`.step-content[data-step="${step}"]`)
+      .querySelector(`.step-wrapper[data-step="${step}"]`)
+      .classList.add('active')
+    document
+      .querySelector(`.content-conainer[data-step="${step}"]`)
       .classList.add('active')
   }
-
-  nextButtons.forEach((button) => {
-    button.addEventListener('click', () => {
-      const nextStep = button.getAttribute('data-next')
-      updateStep(nextStep)
-    })
-  })
 
   prevButtons.forEach((button) => {
     button.addEventListener('click', () => {
       const prevStep = button.getAttribute('data-prev')
       updateStep(prevStep)
     })
+  })
+
+  // Show modal on submit button click
+  submitButton.addEventListener('click', () => {
+    // const recipient = document.querySelector('.info span').textContent
+    // const amount = document.querySelector('#amount').value
+    // const notes = document.querySelector('#notes').value
+    // recipientElement.textContent = recipient
+    // amountElement.textContent = amount ? `$${amount}` : 'Not specified'
+    // notesElement.textContent = notes || 'No notes'
+
+    modal.style.display = 'flex'
+  })
+
+  console.log(confirmModal)
+
+  confirmModal.addEventListener('click', () => {
+    modal.style.display = 'none'
+    updateStep(3) // Move to step 3
+  })
+})
+
+document.addEventListener('DOMContentLoaded', () => {
+  const pinInputs = document.querySelectorAll('.pin-inputs input')
+  const pinForm = document.getElementById('pinForm')
+
+  pinInputs.forEach((input, index) => {
+    input.addEventListener('input', (e) => {
+      const value = e.target.value
+      if (value.length === 1 && index < pinInputs.length - 1) {
+        pinInputs[index + 1].focus()
+      }
+    })
+
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Backspace' && index > 0 && !e.target.value) {
+        pinInputs[index - 1].focus()
+      }
+    })
+  })
+
+  pinForm.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    const pin = Array.from(pinInputs)
+      .map((input) => input.value)
+      .join('')
+
+    if (pin.length < 6) {
+      alert('Please enter a complete 6-digit PIN.')
+      return
+    }
   })
 })

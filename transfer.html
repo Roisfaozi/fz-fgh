@@ -110,7 +110,7 @@
               </div>
             </div>
           </div>
-          <div class="content-conainer" data-step="1">
+          <div class="content-conainer active" data-step="1">
             <!-- Search Box -->
             <div class="table-title">
               <div class="title-wrapper">
@@ -138,7 +138,7 @@
             <div class="pagination" id="paginationControls"></div>
           </div>
 
-          <div class="content-conainer active" data-step="2">
+          <div class="content-conainer" data-step="2">
             <!-- Search Box -->
             <div class="table-title">
               <div class="title-wrapper">
@@ -211,12 +211,95 @@
 
               <!-- Submit Button -->
               <div class="submit-section">
-                <button class="submit-btn">Submit & Transfer</button>
+                <button class="submit-btn next-btn" data-next="3">
+                  Submit & Transfer
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="content-conainer" data-step="3">
+            <!-- Search Box -->
+            <div class="table-title">
+              <div class="title-wrapper">
+                <h3>TRANSFER TO GHALUH 1</h3>
+              </div>
+            </div>
+            <!-- Transaction Table -->
+            <div class="transfer-success">
+              <div class="transfer-info">
+                <img
+                  src="/assets/transfer-success.png"
+                  alt="User Photo"
+                  class="transfer-image" />
+              </div>
+
+              <div class="transfer-desc">
+                <p class="desc-title">Yeay Transfer <span>Success</span></p>
+                <p class="description">
+                  Thank you for using this application for your financial
+                </p>
+                <button
+                  class="transfer-btn next-btn"
+                  onclick="location.href= 'dashboard.html'">
+                  Done
+                </button>
+                <button
+                  class="secondary-btn next-btn"
+                  onclick="location.href= 'transfer.html'">
+                  Transfer Again
+                </button>
               </div>
             </div>
           </div>
         </div>
       </main>
+      <div id="confirmationModal" class="modal">
+        <div class="container">
+          <h2>Transfer to Ghaluh 1</h2>
+          <h3>Enter Your Pin 👋</h3>
+          <p>Enter Your Pin For Transaction</p>
+
+          <form id="pinForm">
+            <div class="pin-inputs">
+              <input
+                type="password"
+                maxlength="1"
+                inputmode="numeric"
+                required />
+              <input
+                type="password"
+                maxlength="1"
+                inputmode="numeric"
+                required />
+              <input
+                type="password"
+                maxlength="1"
+                inputmode="numeric"
+                required />
+              <input
+                type="password"
+                maxlength="1"
+                inputmode="numeric"
+                required />
+              <input
+                type="password"
+                maxlength="1"
+                inputmode="numeric"
+                required />
+              <input
+                type="password"
+                maxlength="1"
+                inputmode="numeric"
+                required />
+            </div>
+            <button id="confirmModal" type="submit" class="btn">Next</button>
+          </form>
+          <p class="reset-text">
+            Forgot Your Pin? <a href="#" id="resetPin">Reset</a>
+          </p>
+        </div>
+      </div>
     </div>
     <script src="script/transfer.js"></script>
   </body>

@@ -136,11 +136,15 @@ hr {
   color: #fff;
 }
 
-input {
+.search-box input {
   width: 300px;
-  padding: 10px !important;
+  padding: 10px;
   margin-right: 10px;
   border-radius: 6px;
+  border: 1px solid #e8e8e8 !important;
+}
+
+input {
   border: 1px solid #e8e8e8 !important;
 }
 
@@ -290,9 +294,11 @@ img {
   border-radius: 4px;
   font-size: 14px;
 }
+
 .input-box.abs {
-  padding: 20px;
+  padding: 10px 10px 10px 30px;
 }
+
 .icon {
   position: absolute;
   left: 10px;
@@ -325,6 +331,198 @@ img {
   background-color: #0056b3;
 }
 
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .container {
+  background: #fff;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.modal .container h2 {
+  color: #4f5665;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.modal .container h3 {
+  color: #0b132a;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.modal .container p {
+  color: #4f5665;
+  font-family: Montserrat;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+/* Pin Inputs */
+.pin-inputs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.pin-inputs input {
+  width: 40px;
+  height: 50px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.pin-inputs input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+}
+
+/* Button */
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+/* Reset Link */
+.reset-text {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #777;
+  text-align: center;
+}
+
+.reset-text a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.reset-text a:hover {
+  text-decoration: underline;
+}
+
+.transfer-success {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.transfer-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 18px;
+}
+
+.transfer-image {
+  width: 500px;
+  height: 500px;
+  border-radius: 0;
+  object-fit: cover;
+}
+
+.transfer-desc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-direction: column;
+}
+
+.transfer-desc .desc-title {
+  color: #0b132a;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 600;
+  text-align: center;
+}
+
+.desc-title span {
+  color: #1ec15f;
+}
+
+.transfer-desc .description {
+  color: #4f5665;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.transfer-btn {
+  background: #2948ff;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+}
+
+.secondary-btn {
+  background: #fff;
+  color: #2948ff;
+  border: 1px solid #2948ff !important;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+}
+
 @media (max-width: 768px) {
   tbody tr td:nth-child(1),
   thead tr th:nth-child(1) {
@@ -341,6 +539,12 @@ img {
 
   .search-box button {
     height: 35px;
+  }
+
+  .search-box input {
+    padding: 0;
+    margin-right: 5px;
+    width: 150px;
   }
   .transfer-flow {
     display: none;

@@ -131,9 +131,9 @@ header .user-section .name span {
   .main-content {
     grid-template-columns: 1fr 1fr; /* Kurangi jumlah kolom */
     grid-template-areas:
-      'balance service'
-      'chart chart'
-      'history history';
+      'container container container container'
+      'container container container container'
+      'container container container container';
   }
 
   .service,
@@ -144,7 +144,6 @@ header .user-section .name span {
   }
 
   .sidebar {
-    width: 80px; /* Sidebar lebih kecil */
     text-align: center;
   }
 

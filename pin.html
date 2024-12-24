@@ -3,142 +3,219 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>E-Wallet Dashboard</title>
-    <link rel="stylesheet" href="/assets/reset.css" />
-    <link rel="stylesheet" href="/assets/dashboard.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title>Pin</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/login.css" />
+
+    <style>
+      .form-section .container {
+        background: #fff;
+        padding: 20px 30px;
+        border-radius: 12px;
+        box-shadow: none !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+      }
+
+      .form-section .container h2 {
+        color: #4f5665;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+      .form-section .container h3 {
+        color: #0b132a;
+        font-family: Montserrat;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+      }
+
+      .form-section .container p {
+        color: #4f5665;
+        font-family: Montserrat;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+      }
+
+      /* Pin Inputs */
+      .pin-inputs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+
+      .pin-inputs input {
+        width: 40px;
+        height: 50px;
+        text-align: center;
+        font-size: 20px;
+        border-bottom: 1px solid #ddd;
+        border-radius: 6px;
+        outline: none;
+        transition: all 0.3s;
+      }
+
+      .pin-inputs input:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 4px rgba(0, 123, 255, 0.5);
+      }
+
+      /* Button */
+      .btn {
+        width: 100%;
+        padding: 12px;
+        background: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .btn:hover {
+        background: #0056b3;
+      }
+
+      /* Reset Link */
+      .reset-text {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #777;
+        text-align: center;
+      }
+
+      .reset-text a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .reset-text a:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
-    <!-- Sidebar -->
-    <div class="dashboard-container">
-      <aside class="sidebar">
-        <div class="logo">E-Wallet</div>
-        <nav>
-          <ul>
-            <li class="active">
-              <a href="/dashboard.html"
-                ><i class="fas fa-chart-pie"></i> Dashboard</a
-              >
-            </li>
-            <li class="">
-              <a href="/transfer.html"
-                ><i class="fas fa-paper-plane"></i> Transfer</a
-              >
-            </li>
-            <li class="">
-              <a href="/transaction-history.html"
-                ><i class="fas fa-history"></i> History</a
-              >
-            </li>
-            <li class="">
-              <a href="/top-up.html"
-                ><i class="fas fa-plus-circle"></i> Top Up</a
-              >
-            </li>
-            <li class="">
-              <a href="/profile.html"><i class="fas fa-user"></i> Profile</a>
-            </li>
-            <li class="" class="logout">
-              <a href="/login.html"
-                ><i class="fas fa-sign-out-alt"></i> Keluar</a
-              >
-            </li>
-          </ul>
-        </nav>
-        <div class="logout">
-          <a href="#"><i class="fas fa-sign-out-alt"></i> Keluar</a>
-        </div>
-      </aside>
+    <main class="container">
+      <!-- Left Section (Form) -->
+      <div class="form-section">
+        <div class="container">
+          <h2>Transfer to Ghaluh 1</h2>
+          <h3>Enter Your Pin 👋</h3>
+          <p>Enter Your Pin For Transaction</p>
 
-      <!-- Main Content -->
-      <main class="main-content">
-        <header>
-          <h1>Dashboard</h1>
-          <div class="user-profile">
-            <i class="fas fa-search"></i>
-            <i class="fas fa-shopping-cart"></i>
-            <img src="https://via.placeholder.com/40" alt="Profile" />
-          </div>
-        </header>
-
-        <!-- Balance and Fast Service -->
-        <section class="summary">
-          <div class="balance-card">
-            <h3>Balance</h3>
-            <h2>Rp.120.000</h2>
-            <p>Income <span class="income">Rp.200.000 +2%</span></p>
-            <p>Expense <span class="expense">Rp.100.000 +5%</span></p>
-          </div>
-          <div class="fast-service">
-            <h3>Fast Service</h3>
-            <div class="buttons">
-              <button class="topup-btn">Top Up</button>
-              <button class="transfer-btn">Transfer</button>
+          <form id="pinForm">
+            <div class="pin-inputs">
+              <input
+                type="password"
+                maxlength="1"
+                inputmode="numeric"
+                required />
+              <input
+                type="password"
+                maxlength="1"
+                inputmode="numeric"
+                required />
+              <input
+                type="password"
+                maxlength="1"
+                inputmode="numeric"
+                required />
+              <input
+                type="password"
+                maxlength="1"
+                inputmode="numeric"
+                required />
+              <input
+                type="password"
+                maxlength="1"
+                inputmode="numeric"
+                required />
+              <input
+                type="password"
+                maxlength="1"
+                inputmode="numeric"
+                required />
             </div>
-          </div>
-        </section>
+            <button id="confirmModal" type="submit" class="btn">Next</button>
+          </form>
+          <p class="reset-text">
+            Forgot Your Pin? <a href="#" id="resetPin">Reset</a>
+          </p>
+        </div>
+      </div>
 
-        <!-- Chart and Transaction -->
-        <section class="main-section">
-          <div class="chart">
-            <h3>Financial Chart</h3>
-            <canvas id="financialChart"></canvas>
-          </div>
-
-          <div class="transaction-history">
-            <h3>Transaction History <span>See All</span></h3>
-            <ul>
-              <li>
-                <img src="https://via.placeholder.com/40" alt="Profile" />
-                <div>
-                  <p>Robert Fox <span>Transfer</span></p>
-                  <p class="income">+Rp50.000</p>
-                </div>
-              </li>
-              <li>
-                <img src="https://via.placeholder.com/40" alt="Profile" />
-                <div>
-                  <p>Floyd Miles <span>Send</span></p>
-                  <p class="expense">-Rp50.000</p>
-                </div>
-              </li>
-              <li>
-                <img src="https://via.placeholder.com/40" alt="Profile" />
-                <div>
-                  <p>Ujang <span>Send</span></p>
-                  <p class="expense">-Rp50.000</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </section>
-      </main>
-    </div>
-
-    <!-- Chart.js Library -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      <!-- Right Section (Illustration) -->
+      <div class="illustration-section">
+        <img src="./assets/pin.png" alt="E-Wallet Illustration" />
+      </div>
+    </main>
     <script>
-      const ctx = document.getElementById('financialChart').getContext('2d')
-      const chart = new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels: ['Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
-          datasets: [
-            {
-              label: 'Income',
-              data: [20000, 75000, 80000, 30000, 10000, 60000, 0],
-              backgroundColor: 'blue',
-            },
-            {
-              label: 'Expense',
-              data: [15000, 50000, 70000, 25000, 5000, 40000, 0],
-              backgroundColor: 'red',
-            },
-          ],
-        },
+      const form = document.querySelector('form')
+      const emailInput = document.getElementById('email')
+      const passwordInput = document.getElementById('password')
+
+      form.addEventListener('submit', (event) => {
+        event.preventDefault()
+
+        // Form validation
+        if (emailInput.value.trim() === '') {
+          poupup('Silakan masukkan alamat email yang valid')
+          return
+        }
+
+        if (passwordInput.value.trim() === '') {
+          poupup('Silakan masukkan kata sandi')
+          return
+        }
+
+        location.href = 'dashboard.html'
       })
+
+      function poupup(pesan) {
+        const poupupElement = document.createElement('div')
+        poupupElement.classList.add('poupup')
+        poupupElement.innerHTML = `
+    <div class="poupup-container">
+      <div class="poupup-header">
+        <h2>Peringatan</h2>
+      </div>
+      <div class="poupup-body">
+        <p>${pesan}</p>
+      </div>
+      <div class="poupup-footer">
+        <button class="poupup-btn">Tutup</button>
+      </div>
+    </div>
+  `
+
+        document.body.appendChild(poupupElement)
+
+        const poupupBtn = poupupElement.querySelector('.poupup-btn')
+        poupupBtn.addEventListener('click', () => {
+          poupupElement.remove()
+        })
+      }
+    </script>
+    <script>
+      function showPassword(id) {
+        const passwordInput = document.getElementById(id)
+        const type = passwordInput.getAttribute('type')
+
+        if (type === 'password') {
+          passwordInput.setAttribute('type', 'text')
+        } else {
+          passwordInput.setAttribute('type', 'password')
+        }
+      }
     </script>
   </body>
 </html>
